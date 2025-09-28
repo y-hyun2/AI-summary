@@ -64,7 +64,7 @@
           {
             "type": "text",
             "text": {
-              "content": "사진 비서: 태깅, 중복 정리, 베스트샷 추천"
+              "content": "지식·검색 비서: 문서 임베딩, 요약, 근거 기반 검색"
             }
           }
         ]
@@ -78,7 +78,7 @@
           {
             "type": "text",
             "text": {
-              "content": "회의 비서: STT, 회의 요약, 액션아이템 추출"
+              "content": "문서 자동화: 템플릿 기반 요약, 작업 센터 협업"
             }
           }
         ]
@@ -92,7 +92,7 @@
           {
             "type": "text",
             "text": {
-              "content": "음성 비서: PC 제어, 일정 관리, 질의응답"
+              "content": "하이브리드 운영: 오프로딩, 감사, 권한 관리"
             }
           }
         ]
@@ -106,21 +106,7 @@
           {
             "type": "text",
             "text": {
-              "content": "지식 관리: 문서 임베딩, 요약, 맥락 기반 검색"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "object": "block",
-      "type": "bulleted_list_item",
-      "bulleted_list_item": {
-        "rich_text": [
-          {
-            "type": "text",
-            "text": {
-              "content": "스마트 검색: 자연어 통합 검색, 출처/링크 제공"
+              "content": "플러그인 플랫폼: 모듈형 에이전트 온보딩"
             }
           }
         ]

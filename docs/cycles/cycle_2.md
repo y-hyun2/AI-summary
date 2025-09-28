@@ -16,5 +16,5 @@
 - 정책 적용 대화 세션: `src/core/conversation/lnp_chat.py`
 
 ### 다음 단계 체크리스트
-- Cycle 2 완료 후 사용자 피드백 세션 및 Cycle 3(회의 비서) 준비
+- Cycle 2 완료 후 사용자 피드백 세션 및 Cycle 3(문서 자동화 & 협업 강화) 준비
 - 문서화: `docs/cycles/cycle_2.md`에 주요 결정/이슈 기록

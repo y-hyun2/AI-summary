@@ -1,20 +1,21 @@
-## Cycle 5 – P4 (하이브리드/운영 관리)
+## Cycle 5 – P4 (검증 및 출시 준비)
 
 ### 목표
-- 클라우드 오프로딩, 감사 로그, 접근 제어 등 운영 기능 강화
-- 정책 기반 모델 자동 선택과 모니터링 대시보드 설계
-- 배포/CI 파이프라인을 운영 환경 기준으로 정비
+- KPI 자동화와 대용량/PII 회귀 테스트를 정비해 안정적인 릴리스 기준을 마련합니다.
+- 설치 마법사, 작업 센터, CLI 가이드를 다듬어 실제 배포 환경에서도 일관된 UX를 제공합니다.
+- 릴리스 체크리스트와 배포 스크립트를 최신화해 운영팀 핸드오프를 준비합니다.
 
-- [x] 오프로딩 전략 및 보안 연동을 위한 유틸리티 초안 (`src/core/infra/offload.py`)
-- [x] 감사 로그/모델 선택 유틸리티 기본 구현 (`src/core/infra/audit.py`, `.../models.py`)
-- [x] 하이브리드 설정 템플릿 `config/hybrid.yaml` 추가
-- [ ] 대시보드/경보 통합 계획 수립
+### 진행 현황
+- [ ] KPI 스냅샷 및 리포트 자동화 (`scripts/release_prepare.py`, `artifacts/kpi_summary.md`)
+- [ ] 대용량/PII 회귀 테스트 확장 (`tests/regression/`, `tests/test_pii_scrubber.py` 강화)
+- [ ] 설치 마법사 & 작업 센터 폴리싱 (`ui/`, `docs/ux/improvements.md` 업데이트)
+- [ ] 릴리스 체크리스트/가이드 개정 (`docs/release_checklist.md`, `docs/release_notes_draft.md`)
 
 ### 산출물
-- 오프로딩/감사/모델 선택 유틸: `src/core/infra/`
-- 하이브리드 설정 템플릿: `config/hybrid.yaml`
-- 회귀 테스트: `tests/test_model_selector.py`, `tests/test_audit_logger.py`
+- 자동화된 KPI 리포트 산출물: `artifacts/kpi.json`, `artifacts/kpi_summary.md`
+- 확장된 회귀 테스트와 테스트 결과 요약: `tests/regression/`, `docs/cycles/cycle_5.md`
+- 최신 릴리스 체크리스트 및 사용자 가이드: `docs/release_checklist.md`, `README.md`
 
 ### 다음 단계 체크리스트
-- Cycle 5 완료 후 전체 운영 시나리오 회고, 릴리스 준비 점검
-- 결정 사항/리스크는 `docs/cycles/cycle_5.md`에 기록
+- Cycle 5 완료 후 출시 후보 빌드 검증, Cycle 6(지속 확장 준비)로 전환
+- 결정 사항/리스크는 `docs/cycles/cycle_5.md`에 누적 기록

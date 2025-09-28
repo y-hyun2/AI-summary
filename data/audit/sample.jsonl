@@ -1,0 +1,1 @@
+{"event_id": "audit-demo-1", "timestamp": "2025-01-01T00:00:00Z", "actor": "system", "action": "chat", "resource": "policy:knowledge_search", "policy_scope": "local_only", "result": "success"}

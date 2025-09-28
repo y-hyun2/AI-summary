@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "template_id": "weekly_report_v1",
+  "version": "0.1.0",
+  "locale": "ko-KR",
+  "sections": [
+    {
+      "title": "핵심 요약",
+      "placeholder": "이번 주 주요 이슈 요약",
+      "policy_scope": "policy"
+    },
+    {
+      "title": "세부 근거",
+      "placeholder": "검색 근거 문서와 하이라이트",
+      "policy_scope": "auto"
+    },
+    {
+      "title": "후속 작업",
+      "placeholder": "요약 기반 액션 아이템",
+      "policy_scope": "policy"
+    }
+  ]
+}

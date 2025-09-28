@@ -1,22 +1,22 @@
-## Cycle 3 – P2 (회의 비서 MVP, 현재는 사용 중단)
+## Cycle 3 – P2 (문서 자동화 & 협업 강화)
 
 ### 목표
-- STT 파이프라인을 연결해 오디오 → 텍스트 변환 및 회의 요약/액션 아이템 추출
-- 폴더 정책과 연동해 회의 자료 저장/보안 정책을 준수
-- 최소 기능의 작업 센터 연동(회의 기록/요약 푸시)과 연계 테스트
+- 문서 요약 결과를 반복 업무용 템플릿(회의록, 주간 보고 등)에 자동으로 채워 넣는 파이프라인을 설계하고 구현합니다.
+- 검색/요약 결과를 작업 센터에서 공유·할당할 수 있도록 협업 흐름과 권한 체크를 확장합니다.
+- 사용자 피드백(좋아요/수정 요청 등)을 수집해 순위 재학습 및 품질 지표로 활용할 준비를 마칩니다.
 
 ### 진행 현황
-- [x] STT 모델/서비스 샘플 파이프라인 구조 마련 (`src/core/agents/meeting/`) — *지식 비서 집중 개편으로 현재 저장소에서 제거됨*
-- [x] 요약·액션 추출 로직과 정책 연동을 위한 데이터 모델/스토리지 뼈대 정의
-- [ ] 회의 로그 저장 포맷 정의 및 인덱싱 파이프라인 통합
-- [ ] 작업 센터/알림 경로 프로토타입
+- [ ] 템플릿 정의/버전 관리를 위한 구조 설계 (`config/templates/`, `docs/specs/template_schema.md` 초안)
+- [ ] 요약 엔진에서 템플릿 채우기 워크플로 구현 (`src/core/summarize/template_renderer.py`)
+- [ ] 작업 센터 UX 확장(공유/할당 UI, 감사 로그) 및 API 설계 (`ui/` 전반, `docs/ux/work_center.md` 업데이트)
+- [ ] 사용자 피드백 로깅 파이프라인과 분석 노트북 초안 (`data/feedback/`, `notebooks/feedback_insights.ipynb`)
 
 ### 산출물
-- 에이전트 모델/파이프라인: `src/core/agents/meeting/models.py`, `.../pipeline.py` *(현재 저장소에는 포함되지 않음)*
-- 기본 설정 템플릿: `config/meeting_agent.yaml` *(현재 저장소에는 포함되지 않음)*
-- 정책 예시 업데이트: `src/core/data_pipeline/policies/examples/smart_folder_policy_sample.json`
-- 회귀 테스트: `tests/test_meeting_pipeline.py` *(현재 저장소에는 포함되지 않음)*
+- 템플릿 스키마 및 예시: `docs/specs/template_schema.md`, `config/templates/weekly_report.json`
+- 템플릿 기반 요약 렌더러: `src/core/summarize/template_renderer.py`
+- 협업 확장 API/UX 문서: `docs/ux/work_center.md`
+- 피드백 로깅 스키마: `src/core/telemetry/feedback.py`, 결과 샘플 `data/feedback/sample.jsonl`
 
 ### 다음 단계 체크리스트
-- Cycle 3 완료 후 STT 품질 검증/피드백, Cycle 4(사진 비서) 계획 조정
-- 주요 결정/리스크는 `docs/cycles/cycle_3.md`에 기록
+- Cycle 3 완료 후 템플릿/협업 플로 사용자 검증, Cycle 4(하이브리드/운영) 준비
+- 주요 결정/리스크는 `docs/cycles/cycle_3.md`에 누적 기록

@@ -1,0 +1,22 @@
+# 역할 기반 접근 제어 템플릿 (초안)
+
+schema_version: 0.1.0
+roles:
+  knowledge_admin:
+    description: "정책/템플릿/모델을 관리하는 관리자"
+    permissions:
+      - policies.read
+      - policies.write
+      - templates.read
+      - templates.write
+      - audit.view
+  knowledge_user:
+    description: "지식 검색 및 요약 기능을 사용하는 일반 사용자"
+    permissions:
+      - chat.use
+      - search.use
+      - templates.read
+  auditor:
+    description: "감사 로그 검토 전용 사용자"
+    permissions:
+      - audit.view
